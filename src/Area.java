@@ -1,12 +1,8 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Area {
 	int len ;
 	int breadth;
-	
-	Area(){
-		
-	}
 	
 	Area(int i, int b){
 		len = i;
@@ -16,8 +12,8 @@ public class Area {
 	
 	public int returnArea() {
 		
-		int results  = len * breadth;
-		return results;
+		 int results =  len * breadth;
+		 return results;
 		
 	}
 	
@@ -25,17 +21,19 @@ public class Area {
 	public static void main(String[] args) {
        
 		Scanner input = new Scanner(System.in);
+		
 	       
 		
 	    System.out.println("Enter the length of rectangle");
-		int len = input.nextInt();
+		 int len = input.nextInt();
 			
 		System.out.println("Enter the breadth of rectangle");
 		int breadth = input.nextInt();
 		
-		Area ar = new Area();
-		((Area) ar).Area(len,breadth);
-		int area=ar.returnArea();
+		Area ar = new Area(len,breadth);
+		
+		System.out.println("Area of rectangle = "+ar.returnArea());
+		
 
 	}
 
